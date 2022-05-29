@@ -8,230 +8,253 @@
     <title>Document</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="stylephoto.css">
     <style>
-        *{
-       padding: 0;
-       margin: 0;
-       box-sizing: border-box;
-   }
-   body{
-       scroll-behavior: smooth;
-       overflow-x:hidden ;
-   }
-   header{
-       width: 100%;
-       height: 90vh;
-       background-image:linear-gradient(rgb(0,0,0,0.8),rgba(87, 45, 45, 0.8)), url("https://images.pexels.com/photos/1264210/pexels-photo-1264210.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
-       /* background-image: url("https://images.pexels.com/photos/1264210/pexels-photo-1264210.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"); */
-       background-size: cover;
-       background-attachment: fixed;
-   }          
-   nav{
-       width: 100%;
-       height: 80px;
-       background: white;
-       color: black;
-       display: flex;
-       justify-content: space-between;
-       align-items: center;
-       padding: 0px 80px;
-       position: fixed;
-       top: 0;
-       z-index: 1;
-       border-bottom: 1px solid rgb(0,0,0,0.2);
-   }   
-   .logo{
-       font-family: sans-serif;
-       font-size: 2.5em;
-       align-items: flex-start;
-   }
-   .logo span{
-       color: red;
-   }
-   .menu a{
-       text-decoration: none;
-       color: black;
-       padding: 10px 20px;
-       font-family: sans-serif;
-       font-size: 20px;
-   }
-   .menu a:first-child{
-       color: rgb(235, 66, 66);
-   }
-   .menu a:hover{
-       color: rgb(235, 66, 66);;
-   }
-   .icon i{
-       font-size: 20px;
-   }
-   .icon i:hover{
-       color:rgb(235, 66, 66) ;
-   }
-   .icon a{
+      @media screen and (min-width: 0px) and (max-width: 970px) {
+        .icon a {
     background: rgb(235, 66, 66);
     color: white;
     border-radius: 5px;
-    padding: 10px 20px;
+    padding: 10px 19px;
     text-decoration: none;
-    /* position: fixed; */
-       /* text-decoration: none;
-       background: rgb(235, 66, 66);
-       color: white;
-       padding: 10px 20px;
-       margin-left: 0px;
-       margin-left: 0px;
-       border-radius: 5px;
-       position: fixed;
-       top: 21px; */
-   }
-   .h-text{
-       color: white;
-       max-width: 700px;
-       position: absolute;
-       top: 50%;
-       left:50%;
-       transform: translate(-50%,-50%);
-       text-align: center;
-   }
-   #camera{
-       font-size: 40px;
-       max-height: 10px;
-
-   }
-   .h-text h1{
-       font-family: sans-serif;
-       font-size: 2em;
-       line-height: 1.5em;
-   }
-   .h-text input{
-       width: 60%;
-       padding:20px;
-       border: none;
-       outline: none;
-       font-size: 15px;
-       border-radius: 8px;
-       /* border-top-left-radius: 0;
-                border-bottom-left-radius: 0; */
-   }
-   .h-text button{
-       width: 30%;
-       padding: 20px;
-       background: rgb(235, 66, 66);
-       color: white;
-       border: none;
-       outline: none;
-       border-radius: 8px;
-       font-size: 15px;
-       margin-top: 30px;
-       
-   }
-   .filter-gallery{
-       padding: 100px;
-   }
-   .portfolio-menu{
-       text-align: center;
-       margin-bottom: 20px;
-   }
-   .portfolio-menu ul li{
-      list-style: none;
-      display: inline-block;   
-      margin: 20px 0px;
-      font-weight: bold;
-      padding: 10px 20px;
-      cursor: pointer;
-      transition: 0.5s ease;
-      text-align: center;
-}
-.portfolio-menu ul li:hover{
-   border-radius: 8px;
-   color: white;
-   background: rgb(235, 66, 66);
-   
-}
-li.active{
-    color: white;
-    background: rgb(235, 66, 66);
-    border-radius: 8px;
-
-}
-.portfolio-item{
+    position: fixed;
+      }
+      nav {
     width: 100%;
-    /* display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    align-items: center;
-   justify-content: space-between; */
-   display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.portfolio-item .item{
-    width: 200px;
-    height: 200px;
-    float: left;
-    margin-bottom: 15px;
-    margin-right: 15px;
-}
-.portfolio-item .item img{
-    width: 100%;
-    height: 100%;
-   border-radius: 8px;
-}
-/* ---------------- */
-.member{
-    width: 100%;
-    padding: 20px 100px;
-    font-family: sans-serif;
-}
-.member-info{
-    text-align: center;
-}
-.member-info h1{
-    font-size: 2.5em;
-}
-.member-info h1 span{
-    color: #e74c3c;
-}
-.member-card{
-    text-align: center;
-    padding-top: 50px;
-    width: 50%;
-    margin: auto;
-}
-.member-card p{
-    margin: 20px 0px;
-    line-height: 2em;
-
-}
-.member-card h2{
-    margin: 20px 0px;
-}
-.m-images{
-    margin: 20px 0px;
-    overflow: hidden;
+    height: 80px;
+    background: white;
+    color: black;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    padding: 0px 80px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    border-bottom: 1px solid rgb(0,0,0,0.2);
 }
-.m-images img{
-    width: 100%;
-    cursor: pointer;
-    transition: 0.4s ease-in-out;
-    
-    /* display: block;
-    flex-wrap: nowrap; */
+.newsletter button {
+    position: absolute;
+    right: 0;
+    padding: 22px;
+    width: 43%;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 0 8px 8px 0;
 }
-.m-images img:hover{
-    transform: scale(1.5);
-}
-footer{
+footer {
     width: 100%;
     height: 100vh;
     background: #262626;
     padding: 50px 100px;
 }
-.newsletter{
+      }
+@media screen and (min-width: 0px) and (max-width: 886px) {
+    .logo {
+    font-family: sans-serif;
+    font-size: 1.5em;
+    align-items: flex-start;
+    height: 10px;
+}
+.portfolio-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+footer {
+    width: 100%;
+    height: 100vh;
+    background: #262626;
+    padding: 50px 100px;
+}
+    }
+    @media screen and (min-width: 0px) and (max-width: 768px) {
+      .logo  {
+    font-family: sans-serif;
+    font-size: 20px;
+    align-items: flex-start;
+    height: 10px;
+}
+.menu a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+.portfolio-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.newsletter button {
+    position: absolute;
+    right: 0;
+    padding: 22px;
+    width: 43%;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 0 8px 8px 0;
+}
+.newsletter input {
+    padding: 17px;
+    width: 70%;
+    border-radius: 8px;
+    outline: none;
+    font-family: sans-serif;
+}
+footer {
+    width: 100%;
+    height: 100vh;
+    background: #262626;
+    padding: 50px 100px;
+}
+    }
+    @media screen and (min-width: 0px) and (max-width: 678px) {
+        .menu a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 13px;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+.ntext button{
+    font-size: 8px;
+}  
+.h-text input {
+    width: 100%;
+    padding: 20px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 8px;
+}
+.portfolio-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.newsletter input {
+    padding: 17px;
+    width: 70%;
+    border-radius: 8px;
+    outline: none;
+    font-family: sans-serif;
+}
+footer {
+    width: 100%;
+    height: 150vh;
+    background: #262626;
+    padding: 50px 100px;
+}
+    }
+    @media screen and (min-width: 0px) and (max-width: 480px) {
+        .h-text button {
+    width: 37%;
+    padding: 20px;
+    background: rgb(235, 66, 66);
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    font-size: 15px;
+    margin-top: 30px;
+}
+footer {
+    width: 100%;
+    height: 177vh;
+    background: #262626;
+    padding: 50px 100px;
+}
+.portfolio-item .item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+.portfolio-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.newsletter input {
+    padding: 18px;
+    width: 70%;
+    border-radius: 8px;
+    outline: none;
+    font-family: sans-serif;
+}
+
+
+    }
+    @media screen and (min-width: 0px) and (max-width: 450px) {
+        .menu a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 13px;
+    font-family: sans-serif;
+    font-size: 18px;
+
+    }
+    .h-text input {
+    width: 100%;
+    padding: 20px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 8px;
+}
+    .logo  {
+    font-family: sans-serif;
+    font-size: 20px;
+    align-items: flex-start;
+    height: 10px;
+}
+.h-text button {
+    width: 40%;
+    padding: 20px;
+    background: rgb(235, 66, 66);
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    font-size: 15px;
+    margin-top: 30px;
+}
+.portfolio-item .item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+.portfolio-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.m-images img {
+    display: inline-block;
+    flex-direction: row;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+.ntext button{
+    font-size: 5px;
+}  
+.newsletter {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -241,69 +264,132 @@ footer{
     border: 1px solid rgb(255, 255, 255);
     color: white;
 }
-.newsletter >div{
-    flex-basis: 50% ;
-}
-.ntext{
-    text-align: right;
-}
-.newsletter  h2{
-    font-size: 2em;
-    font-family: sans-serif;
-}
-.newsletter p{
-    font-size: 20px;
-    margin-top: 10px;
-}
-.newsletter label{
-    position: relative;
-}
-.newsletter input{
-    padding: 20px;
+.newsletter input {
+    padding: 18px;
     width: 70%;
     border-radius: 8px;
     outline: none;
     font-family: sans-serif;
 }
-.newsletter button{
-    position: absolute;
-    right: 0;
-    padding: 22px;
-    width: 30%;
-    background: #e74c3c;
+    }
+    
+
+    @media screen and (min-width: 0px) and (max-width: 400px) {
+        .h-text button {
+    width: 45%;
+    padding: 20px;
+    background: rgb(235, 66, 66);
     color: white;
     border: none;
     outline: none;
-    border-radius:0 8px 8px 0;
+    border-radius: 8px;
+    font-size: 15px;
+    margin-top: 30px;
 }
-.f-contact{
+.portfolio-item {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.portfolio-item .item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+.m-images img {
+    width: 100%;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+.ntext button {
+    font-size: 9px;
+}
+.newsletter input {
+    padding: 18px;
+    width: 99%;
+    border-radius: 9px;
+    outline: none;
+    font-family: sans-serif;
+}
+footer {
+    width: 100%;
+    height: 177vh;
+    background: #262626;
+    padding: 50px 100px;
+}
+.f-contact h1 {
+    font-size: 8px;
+}
+.f-contact p {
+    line-height: 2em;
+    font-size: 11px;
+    color: gray;
+    cursor: pointer;
+
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 570px) {
+
+    .h-text button {
+    width: 45%;
+    padding: 20px;
+    background: rgb(235, 66, 66);
     color: white;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    font-size: 15px;
+    margin-top: 30px;
+
+
+    }
+    .portfolio-item .item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+.portfolio-item {
     width: 100%;
     display: flex;
-    justify-content:space-between ;
     align-items: center;
-    margin-top: 3em;
-    border-bottom: 1px solid rgb(255, 255, 255 , 0.2);
+    justify-content: center;
+    flex-wrap: wrap;
 }
-.f-contact h1{
-    font-size: 20px;
+.m-images img {
+    width: 100%;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
-.f-contact >div{
-    flex-basis: 20%;
+.ntext button{
+    font-size: 9px;
+}  
+.newsletter{
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    justify-items: flex-start;
+} 
+.newsletter input {
+    padding: 18px;
+    width: 70%;
+    border-radius: 8px;
+    outline: none;
+    font-family: sans-serif;
 }
-.f-contact p{
-    line-height: 2em;
-    font-size: 20px;
-    color: gray;
-    cursor: pointer;    
+footer {
+    width: 100%;
+    height: 177vh;
+    background: #262626;
+    padding: 50px 100px;
 }
-.f-contact p:hover{
-    color: white;
 }
-/* .f-contact i{
-    background: white;
-    color: black;
-} */
+
     </style>
 </head>
 <body>
@@ -342,79 +428,79 @@ footer{
             </ul>
         </div>
         <div class="portfolio-item">
-            <div class="item nature" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50">
+            <div class="item nature" >
              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwukmVz8xLnOlEfSS9rm77xb0ZMd-xlkHm5g&usqp=CAU" alt="" width="100" height="100">
             </div>
-            <div class="item faishon" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50">
+            <div class="item faishon" >
                 <img src="https://www.trendsetterlive.com/wp-content/uploads/2021/04/yamna-2-740x431.jpg" alt="" width="100" height="100">
                </div>
-               <div class="item wedding" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50">
+               <div class="item wedding" >
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa1MV5o49FAeTCxpqfjEn-c8OE2V1W0qoaCg&usqp=CAU" alt="" width="100" height="100">
                </div>
             
-            <div class="item nature"  data-aos="fade-up" data-aos-offset="100" data-aos-delay="50">
+            <div class="item nature"  >
              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHCeytlX9sAmdzJFxZNQZrEX44JUnGDvWuAg&usqp=CAU" alt="" width="100" height="100">
             </div>
-            <div class="item faishon"  data-aos="fade-up" data-aos-offset="100" data-aos-delay="50">
+            <div class="item faishon"  >
              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUtsNMqY0-shijZZwdI6zz5ABnkTmLKuVRqQ&usqp=CAU" alt="" width="100" height="100">
             </div>
-            <div class="item wedding" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50">
+            <div class="item wedding" >
                 <img src="https://images.pexels.com/photos/962346/pexels-photo-962346.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" width="100" height="100">
                </div>
-            <div class="item nature" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50">
+            <div class="item nature" >
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkgXWUMr_Vcw6KhaHLTy0SNSljgWrMIi5rFQ&usqp=CAU" alt="" width="100" height="100">
                </div>
-               <div class="item faishon" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50">
+               <div class="item faishon" >
                 <img src="https://biooverview.com/wp-content/uploads/2022/01/Can.jpg" alt="" width="100" height="100">
                </div>
-            <div class="item wedding" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50">
+            <div class="item wedding" >
              <img src="https://i.insider.com/5eac8da748d92c3d275bb2de?width=700" alt="" width="100" height="100">
             </div>
-            <!-- ---------------------------------------------------------------------------------- -->
-            <div class="item nature"  data-aos="fade-up" data-aos-offset="100" data-aos-delay="50">
+            <!-- ---------------------------------------------------------------------------------->
+            <div class="item nature"  >
                 <img src="https://images.pexels.com/photos/4366465/pexels-photo-4366465.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" width="100" height="100">
                </div>
-               <div class="item faishon"  data-aos="fade-up" data-aos-offset="100" data-aos-delay="50">
+               <div class="item faishon"  >
                 <img src="https://images.pexels.com/photos/845434/pexels-photo-845434.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="" width="100" height="100">
                </div>
-               <div class="item wedding" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50">
+               <div class="item wedding" >
                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDuXN9hitDdeZROhi4Hk7bFBn-PMj_wbz-mg&usqp=CAU" alt="" width="100" height="100">
                   </div>
                   <!-- ---------------------------------------------------------------------------------------- -->
-                  <div class="item nature"  data-aos="fade-up" data-aos-offset="100" data-aos-delay="50">
+                  <div class="item nature"  >
                     <img src="https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="" width="100" height="100">
                    </div>
-                   <div class="item faishon"  data-aos="fade-up" data-aos-offset="100" data-aos-delay="50">
+                   <div class="item faishon"  >
                     <img src="https://images.pexels.com/photos/2813808/pexels-photo-2813808.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" width="100" height="100">
                    </div>
-                   <div class="item wedding" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50">
+                   <div class="item wedding" >
                        <img src="https://images.pexels.com/photos/265722/pexels-photo-265722.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="" width="100" height="100">
                       </div>
                       <!-- ---------------------------------------------------------------------------------------------------- -->
-                      <div class="item nature"  data-aos="fade-up" data-aos-offset="100" data-aos-delay="50">
+                      <div class="item nature"  >
                         <img src="https://images.pexels.com/photos/1995730/pexels-photo-1995730.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="" width="100" height="100">
                        </div>
-                       <div class="item faishon"  data-aos="fade-up" data-aos-offset="100" data-aos-delay="50">
+                       <div class="item faishon"  >
                         <img src="https://images.pexels.com/photos/965324/pexels-photo-965324.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="" width="100" height="100">
                        </div>
-                       <div class="item faishon"  data-aos="fade-up" data-aos-offset="100" data-aos-delay="50">
+                       <div class="item faishon"  >
                         <img src="https://images.pexels.com/photos/432059/pexels-photo-432059.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="" width="100" height="100">
                        </div>
                        <div class="item faishon"  data-aos="fade-up" data-aos-offset="100" data-aos-delay="100">
                         <img src="https://images.pexels.com/photos/1852382/pexels-photo-1852382.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" width="100" height="100">
                        </div>
-                       <div class="item wedding" data-aos="fade-up" data-aos-offset="" data-aos-delay="50">
+                       <div class="item wedding">
                            <img src="https://images.pexels.com/photos/9545496/pexels-photo-9545496.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" width="100" height="100">
                           </div>
         </div>
 
     </section>
     <section class="member">
-        <div class="member-info" data-aos="zoom-in-down" data-aos-offdet="100" data-aos-delay="200">
+        <div class="member-info" data-aos="zoom-in-down" data-aos-offdet="50" data-aos-delay="50">
             <h1> Our <span>Informations</span></h1>
             <p>What our Member says</p>
         </div>
-        <div class="member-card" data-aos="fade-up" data-aos-offdet="100" data-aos-delay="200">
+        <div class="member-card" data-aos="fade-up" data-aos-offdet="50" data-aos-delay="50">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQw1Zt6hYxL0BqeYfQS04-4CxKzCLir3u26a-HyAsTTWwwyD2mRper2whQ2Urrco4PGiQ&usqp=CAU" alt="" height="100" width="100">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium facere numquam animi officiis quo velit. Sint corrupti voluptas at ad nemo quam voluptatem, incidunt vel enim veritatis dolores vero unde!</p>
              <h2>*Maria Sharpova</h2>
@@ -463,7 +549,7 @@ footer{
             </div>
             <div>
                 <h1>Details</h1>
-                <p> Photography</p>
+                <p> Phhotography</p>
                 <p>Gallery</p>
                 <p>About</p>
                 <p>Pricing plans</p>
