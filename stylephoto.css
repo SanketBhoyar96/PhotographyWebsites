@@ -14,8 +14,7 @@ header{
     /* background-image: url("https://images.pexels.com/photos/1264210/pexels-photo-1264210.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"); */
     background-size: cover;
     background-attachment: fixed;
-}  
-       
+}          
 nav{
     width: 100%;
     height: 80px;
@@ -291,7 +290,11 @@ footer{
  color: white;
 }
 
-@media  (max-width: 1200px) {
+/*
+media query
+
+*/
+@media  (max-width: 1200px ){
     *{
         padding: 0;
         margin: 0;
@@ -302,12 +305,13 @@ footer{
         overflow-x:hidden ;
     }
     header{
-        width: 100%;
-        height: 90vh;
+       
+        
         background-image:linear-gradient(rgb(0,0,0,0.8),rgba(87, 45, 45, 0.8)), url("https://images.pexels.com/photos/1264210/pexels-photo-1264210.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
         /* background-image: url("https://images.pexels.com/photos/1264210/pexels-photo-1264210.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"); */
         background-size: cover;
         background-attachment: fixed;
+        height:800px;
     }          
     nav{
         width: 100%;
@@ -325,9 +329,9 @@ footer{
     }   
     .logo{
         font-family: sans-serif;
-        font-size: 2.5em;
+        font-size: 25px;
         align-items: flex-start;
-        height: 10px;
+       
     }
     .logo span{
         color: red;
@@ -335,7 +339,7 @@ footer{
     .menu a{
         text-decoration: none;
         color: black;
-        padding: 10px 20px;
+        padding: 50px;
         font-family: sans-serif;
         font-size: 20px;
     }
@@ -354,9 +358,11 @@ footer{
     .icon a{
      background: rgb(235, 66, 66);
      color: white;
-     border-radius: 5px;
-     padding: 10px 20px;
+     border-radius:1px;
+     padding: 0px;
      text-decoration: none;
+
+
      /* position: fixed; */
         /* text-decoration: none;
         background: rgb(235, 66, 66);
@@ -406,7 +412,7 @@ footer{
         outline: none;
         border-radius: 8px;
         font-size: 15px;
-        margin-top: 30px;
+        margin-top: 2px;
         
     }
     .filter-gallery{
@@ -510,15 +516,16 @@ footer{
      transform: scale(1.5);
     }
     footer{
-     width: 100%;
-     height: 100vh;
+     
+     height: 100%;
      background: #262626;
      padding: 50px 100px;
+     width: fit-content;
     }
+
     .newsletter{
-     width: 100%;
      display: flex;
-     justify-content: space-between;
+     justify-content: space-evenly;
      align-items: center;
      padding: 30px;
      border: 1px;
@@ -544,21 +551,24 @@ footer{
     }
     .newsletter input{
      padding: 20px;
-     width: 70%;
      border-radius: 8px;
      outline: none;
      font-family: sans-serif;
+     
+
+     
     }
     .newsletter button{
      position: absolute;
      right: 0;
      padding: 22px;
-     width: 30%;
+     width: 100px;
      background: #e74c3c;
      color: white;
      border: none;
      outline: none;
      border-radius:0 8px 8px 0;
+
     }
     .f-contact{
      color: white;
