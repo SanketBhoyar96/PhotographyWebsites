@@ -777,7 +777,7 @@ media query
             margin-top: 10px;
         }
         .newsletter input {
-            padding: 2px;
+            padding: 0px;
             width: 100%;
             border-radius: 8px;
             outline: none;
