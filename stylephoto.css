@@ -846,7 +846,7 @@ media query
 
 
     }
-    @media  (max-width: 600px ){
+/*     @media  (max-width: 600px ){
         .logo {
             font-family: sans-serif;
             font-size: 22px;
@@ -946,4 +946,4 @@ media query
             font-family: sans-serif;
         }
 
-    }
+    } */
