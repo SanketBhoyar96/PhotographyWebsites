@@ -294,7 +294,7 @@ footer{
 media query
 
 */
-@media  (max-width: 1200px ){
+@media  (max-width: 100px ){
     *{
         padding: 0;
         margin: 0;
