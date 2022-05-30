@@ -676,7 +676,7 @@ media query
         .newsletter button {
             position: absolute;
             right: 0;
-            padding: 10px;
+            padding: 11px;
             width: 30%;
             background: #e74c3c;
             color: white;
