@@ -605,6 +605,9 @@ media query
             margin: 0;
             box-sizing: border-box;
         }
+         .hidden{
+            visibility:hidden;
+        }
         header{
             width: 100%;
             height: 90vh;
